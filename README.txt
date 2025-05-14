@@ -1,0 +1,14 @@
+genotype_gen.py creates a genotype dataset for a set of individuals, with features to add 
+nonlinear interactions between SNPs (dominance and epistasis). Outputs a .raw and .map files
+
+GWAS.py runs a GWAS on the dataset created by genotype_gen.py. Outputs a csv with summary stats, 
+manhattan plot of significant SNPs, and a table of the top 10 most significant SNPs by p-value.
+
+RandomForest.py applies the random forest algorithmn to the created dataset to find most significant
+SNPs by GINI importance (different than significance in GWAS). Creates a manhattan plot, table of 
+top 10 most significance SNPs, and a scree plot to show the proportion of sparse SNPs pruned.
+
+"""How to run
+1. Run genotype_gen.py to create dataset (already provided)
+2. Run GWAS.py to generate GWAS results
+3. Run RandomForest.py to generate rf results
